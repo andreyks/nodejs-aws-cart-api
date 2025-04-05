@@ -81,3 +81,13 @@ if command failed make script executable
 chmod +x ./get-token.sh
 ```
 
+
+
+
+npm install --save-dev @types/aws-lambda serverless-http
+
+npm install aws-cdk-lib constructs @types/aws-lambda @nestjs/platform-express
+
+npm run build
+
+cdk deploy
