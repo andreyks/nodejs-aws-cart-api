@@ -41,3 +41,8 @@ lerna-debug.log*
 
 # Postgres fof local development
 postgres-data
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+cdk.context.json

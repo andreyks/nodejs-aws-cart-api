@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { Handler, Context } from 'aws-lambda';
+import { Handler, Context, Callback } from 'aws-lambda';
 import serverlessHttp from 'serverless-http';
 
 let server: Handler;
@@ -11,10 +11,15 @@ async function bootstrap() {
   return serverlessHttp(app.getHttpAdapter().getInstance());
 }
 
-export const handler: Handler = async (event: any, context: Context, callback) => {
-  if (!server) {
-    server = await bootstrap();
+export const handler: Handler = async (event: any, context: Context, callback: Callback) => {
+  try {
+    if (!server) {
+      console.log('Bootstraping NestJS application...');
+      server = await bootstrap();
+    }
+    return server(event, context, callback);
+  } catch (error) {
+    console.log('Request error:', error);
+    throw(error);
   }
-  // const callbackServer = () =>  {console.log("callback")}
-  return server(event, context, callback);
 };
