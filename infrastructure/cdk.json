@@ -1,22 +1,22 @@
 {
-    "app": "npx ts-node --prefer-ts-exts App.ts",
-    "watch": {
-      "include": [
-        "**"
-      ],
-      "exclude": [
-        "README.md",
-        "cdk*.json",
-        "**/*.d.ts",
-        "**/*.js",
-        "tsconfig.json",
-        "package*.json",
-        "yarn.lock",
-        "node_modules",
-        "test"
-      ]
-    },
-    "context": {
+  "app": "npx ts-node --prefer-ts-exts App.ts",
+  "watch": {
+  "include": [
+    "**"
+  ],
+  "exclude": [
+    "README.md",
+    "cdk*.json",
+    "**/*.d.ts",
+    "**/*.js",
+    "tsconfig.json",
+    "package*.json",
+    "yarn.lock",
+    "node_modules",
+    "test"
+  ]
+  },
+  "context": {
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
     "@aws-cdk/core:checkSecretUsage": true,
     "@aws-cdk/core:target-partitions": [
@@ -82,7 +82,8 @@
     "@aws-cdk/aws-route53-targets:userPoolDomainNameMethodWithoutCustomResource": true,
     "@aws-cdk/aws-elasticloadbalancingV2:albDualstackWithoutPublicIpv4SecurityGroupRulesDefault": true,
     "@aws-cdk/aws-iam:oidcRejectUnauthorizedConnections": true,
-    "@aws-cdk/core:enableAdditionalMetadataCollection": true
+    "@aws-cdk/core:enableAdditionalMetadataCollection": true,
+    "@aws-cdk/aws-lambda:createNewPoliciesWithAddToRolePolicy": true
   }
-  }
+}
   
