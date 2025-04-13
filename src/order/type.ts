@@ -27,6 +27,9 @@ export type CreateOrderDto = {
     lastName: string;
     firstName: string;
   };
+  comments: string | null;
+  status: string;
+  total: number;
 };
 
 export type PutCartPayload = {
