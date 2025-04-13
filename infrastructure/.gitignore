@@ -1,0 +1,9 @@
+# Javascript files which are builded by tsc from typescript
+*.js
+
+# npm install files
+node_modules
+
+# CDK asset
+.cdk.staging
+cdk.out

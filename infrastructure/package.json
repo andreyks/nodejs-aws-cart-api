@@ -1,0 +1,36 @@
+{
+    "name": "NestJS Lambda",
+    "version": "0.0.1",
+    "description": "Infrastructure for a NestJS Lambda",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc -w",
+        "cdk": "cdk",
+        "deploy": "npm run build && cdk deploy --require-approval never",
+        "deploy:watch": "npm run build && cdk deploy --require-approval never --watch",
+        "destroy": "cdk destroy"
+    },
+    "author": {
+        "name": "Amazon Web Services",
+        "url": "https://aws.amazon.com",
+        "organization": true
+    },
+    "license": "Apache-2.0",
+    "devDependencies": {
+        "@types/aws-lambda": "^8.10.148",
+        "@types/jest": "^29.5.14",
+        "@types/node": "^22.7.9",
+        "aws-cdk": "2.178.2",
+        "esbuild": "^0.25.2",
+        "jest": "^29.7.0",
+        "ts-jest": "^29.2.5",
+        "ts-node": "^10.9.2",
+        "typescript": "~5.8.3"
+      },
+      "dependencies": {
+        "@nestjs/platform-express": "^11.0.13",
+        "dotenv": "^16.4.7",
+        "aws-cdk-lib": "2.178.2",
+        "constructs": "^10.4.2"
+      }
+}
