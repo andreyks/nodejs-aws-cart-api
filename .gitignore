@@ -46,3 +46,6 @@ postgres-data
 .cdk.staging
 cdk.out
 cdk.context.json
+
+# Ignore EBS
+aws-elastic-beanstalk-*
