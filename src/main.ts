@@ -10,7 +10,7 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService);
 
-  const port = configService.get('APP_PORT') || 4000;
+  const port = configService.get('APP_PORT') || 3000;
 
   app.enableCors({
     origin: (req, callback) => callback(null, true),
