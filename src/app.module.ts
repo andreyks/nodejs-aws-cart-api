@@ -35,7 +35,7 @@ console.log(process.env.DB_HOST, process.env.DB_PORT, process.env.DB_USERNAME, p
       // entities: [__dirname + '/**/*.entity{.ts,.js}'],
       entities: [CartItemEntity, CartEntity, OrderEntity, UserEntity,],
       synchronize: true,
-      ssl: true,
+      ssl: process.env.DB_SSL=='true',
     }),
     ConfigModule.forRoot()
   ],

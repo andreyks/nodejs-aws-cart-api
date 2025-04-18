@@ -10,6 +10,7 @@ infrastructure
 
 # Postgres fof local development
 postgres-data
+dump.sql
 
 # Ignore tests and reports
 test

@@ -1,5 +1,5 @@
 import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
-import { CartItemEntity } from './cart-item.entity';
+import { CartItem } from './cartItem.entity';
 
 @Entity('products')
 export class ProductEntity {
@@ -15,8 +15,8 @@ export class ProductEntity {
   @Column({ type: 'integer' })
   price: number;
 
-  @OneToMany(() => CartItemEntity, (cartItem) => cartItem.product, {
+  @OneToMany(() => CartItem, (cartItem) => cartItem.product_id, {
     cascade: true,
   })
-  carts: CartItemEntity[];
+  carts: CartItem[];
 }
