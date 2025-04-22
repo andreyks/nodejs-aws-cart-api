@@ -1,0 +1,41 @@
+# ignore git files
+.git
+.gitignore
+
+# Ignore node filees
+node_modules
+
+# Ignore CDK fro task 08
+infrastructure
+
+# Postgres fof local development
+postgres-data
+dump.sql
+
+# Ignore tests and reports
+test
+test-coverage
+coverage
+
+# Ignore IDE and editor specific files
+.vscode
+
+# Ignore Docker-related files
+.dockerignore
+Dockerfile*
+docker-compose*
+
+# Ignore environment files
+env.example
+
+# Ignore text files, logs
+*.log
+*.md
+LICENSE
+
+# Ignore development files
+.prettierrc
+.eslintrc.js
+get-token.sh
+.elasticbeanstalk
+aws-elastic-beanstalk-*

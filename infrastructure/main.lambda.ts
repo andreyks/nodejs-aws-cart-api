@@ -1,3 +1,4 @@
+// Should be located at /src/main.lambda.ts
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { Handler, Context, Callback } from 'aws-lambda';

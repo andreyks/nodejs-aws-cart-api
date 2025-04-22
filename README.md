@@ -91,3 +91,31 @@ npm install aws-cdk-lib constructs @types/aws-lambda @nestjs/platform-express
 npm run build
 
 cdk deploy
+
+
+Task 09
+
+### Create application
+
+docker build . -t andreyks/nodejs-aws-cart
+
+eb init andreyks-cart-api -r eu-north-1
+
+eb create development --cname andreyks-cart-api-dev --single --timeout 25 \
+  --envvars "DB_HOST=shop.czki8iaoc6l8.eu-north-1.rds.amazonaws.com,DB_PORT=5432,DB_USERNAME=postgres,DB_PASSWORD=Gewf\$3edf,DB_NAME=shop,DB_SSL=true,DB_SYNC=true,DB_LOGGING=true,NODE_OPTIONS=--max-old-space-size=4096,NODE_ENV=production,APP_PORT=3000"
+
+
+### Local environment
+
+// Run postgres
+docker-compose up -d
+
+// Run cart app
+docker run -p3000:3000 \                         
+-e DB_HOST='localhost' \
+-e DB_PORT='5432' \
+-e DB_NAME='awscart' \
+-e DB_USERNAME='awscart' \
+-e DB_PASSWORD="dRg63tgzfjs" \
+-e DB_SSL=false \
+andreyks/nodejs-aws-cart 
